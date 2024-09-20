@@ -1,6 +1,7 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component, } from '@angular/core';
 import { ImageComponent } from '../image/image.component';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-gallery',
@@ -23,6 +24,11 @@ export class GalleryComponent {
 
   viewImage(image: { url: string, description: string }): void {
     this.selectedImage = image;
+  }
+
+  // Cerrar la modal y volver a la galería
+  onCloseImage(): void {
+    this.selectedImage = null;
   }
 
 }

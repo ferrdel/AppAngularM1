@@ -2,7 +2,7 @@
 <!-- Modal para mostrar la imagen en grande -->
 <div class="modalImg" *ngIf="selectedImage">
     <div class="modalContent" >
-        <span class="closeBtn" (click)="closeImage()">&times;</span>
+        <span  class="closeBtn" (click)="closeImage()">&times;</span>
         <img [src]="selectedImage.url" [alt]="selectedImage.description">
         <p>{{ selectedImage.description }}</p>
     </div>

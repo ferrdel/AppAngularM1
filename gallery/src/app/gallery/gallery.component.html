@@ -9,4 +9,5 @@
     </div>
 </div>
 
-<app-image *ngIf="selectedImage" [selectedImage]="selectedImage"></app-image>
+
+<app-image *ngIf="selectedImage" [selectedImage]="selectedImage" (close)="onCloseImage()"></app-image>

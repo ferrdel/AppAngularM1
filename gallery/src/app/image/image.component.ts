@@ -5,7 +5,7 @@ import { GalleryComponent } from '../gallery/gallery.component';
 @Component({
   selector: 'app-image',
   standalone: true,
-  imports: [NgIf],
+  imports: [NgIf,GalleryComponent],
   templateUrl: './image.component.html',
   styleUrl: './image.component.css'
 })
@@ -21,7 +21,7 @@ export class ImageComponent {
   }
 
   closeImage(): void {
-    this._closeImage.emit(); // Emite el evento cuando se cierra la imagen
+    this._closeImage.emit(); // Emite el evento cuando se cierra la imagen 
   }
 
 }
