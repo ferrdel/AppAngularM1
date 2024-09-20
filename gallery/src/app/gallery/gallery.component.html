@@ -1,0 +1,12 @@
+
+<div class="tittleImg">
+    <h1>Galeria de Imagenes</h1>
+</div>
+
+<div class="gallery-container">
+    <div class="gallery-item" *ngFor="let image of images" (click)="viewImage(image)">
+        <img [src]="image.url" [alt]="image.description">
+    </div>
+</div>
+
+<app-image *ngIf="selectedImage" [selectedImage]="selectedImage"></app-image>

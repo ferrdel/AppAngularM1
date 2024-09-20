@@ -1,0 +1,25 @@
+
+<div>
+    <h2 id="titleTask">List Task!</h2>
+    <div class="addTask">
+        <div>
+            <!-- Input para agregar una nueva tarea -->
+            <input #taskInput type="text" placeholder="Escribe la tarea" /></div>
+        <div>
+            <!-- Botón para agregar la tarea -->
+            <button class="btnAdd" (click)="addTask(taskInput)">Add Task</button></div>
+    </div>
+
+
+    <div>        
+        <h5 class="tittleStade">Realizado</h5>         
+        <!-- Listado de tareas -->
+        <ul  *ngFor="let task of tasks; let i = index" class="listTask">
+            <li>
+                {{ task }}
+                <input class="inputCheck" type="checkbox" (change)="onCheckboxChange($event)">
+                <button class="btnDelete" [disabled]="!isCheckboxSelected" (click)="removeTask(i)">Delete</button>
+            </li>
+        </ul>
+    </div>
+</div>
